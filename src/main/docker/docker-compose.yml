@@ -1,11 +1,12 @@
-version: '2'
+version: '3.3'
 
 services:
-  app:
+  spot-service:
     image: 'paulevers/spot-service:latest'
+    hostname: spot-service
     build:
       context: .
-    container_name: app
+    container_name: spot-service
     depends_on:
       - db
     environment:
@@ -13,6 +14,8 @@ services:
       - SPRING_DATASOURCE_USERNAME=compose-postgres
       - SPRING_DATASOURCE_PASSWORD=compose-postgres
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    ports:
+      - 8081:8080
 
   db:
     image: 'postgres:13.1-alpine'
