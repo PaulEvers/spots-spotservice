@@ -1,12 +1,20 @@
 version: '3.3'
 
 services:
-  spot-service:
-    image: 'paulevers/spot-service:latest'
-    hostname: spot-service
+  message-broker:
+    image: rabbitmq:3.8-management
+    hostname: message-broker
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+      
+  spotservice:
+    image: 'spotservice:0.0.1-SNAPSHOT'
+    hostname: spotservice
     build:
       context: .
-    container_name: spot-service
+    container_name: spotservice
     depends_on:
       - db
     environment:
