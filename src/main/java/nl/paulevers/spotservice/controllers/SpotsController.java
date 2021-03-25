@@ -1,6 +1,7 @@
 package nl.paulevers.spotservice.controllers;
 
 import com.netflix.discovery.EurekaClient;
+import nl.paulevers.spotservice.entities.Coordinates;
 import nl.paulevers.spotservice.entities.Spot;
 import nl.paulevers.spotservice.repositories.ISpotsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,14 @@ public class SpotsController {
 
     @GetMapping(value="/spots")
     public List<Spot> spots() {
-    return new ArrayList<Spot>();
+        List<Spot> spots = new ArrayList<>();
+        Spot spot = new Spot();
+        spot.setId("1");
+        spot.setName("Test");
+        spot.setCategory("TestCategory");
+        spot.setCoordinates(new Coordinates(5.0, 10.0));
+        spots.add(spot);
+        
+        return spots;
     }
 }
