@@ -1,31 +1,27 @@
 package nl.paulevers.spotservice.repositories;
 
 import nl.paulevers.spotservice.entities.Spot;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public class SpotsRepository implements ISpotsRepository {
-    @Override
+public class SpotsRepository {
     public List<Spot> getAllSpots() {
         return null;
     }
 
-    @Override
     public Spot getSpot(String id) {
         return null;
     }
 
-    @Override
     public void createSpot(Spot spot) {
 
     }
 
-    @Override
     public void deleteSpot(String id) {
 
     }
 
-    @Override
     public void updateSpot(Spot spot) {
 
     }

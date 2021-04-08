@@ -6,7 +6,7 @@ import nl.paulevers.spotservice.repositories.ISpotsRepository;
 
 import java.util.List;
 
-public class MockSpotsRepository implements ISpotsRepository {
+public class MockSpotsRepository {
 
     Spot spot1;
     Spot spot2;
@@ -31,12 +31,10 @@ public class MockSpotsRepository implements ISpotsRepository {
         spots.add(spot2);
     }
 
-    @Override
     public List<Spot> getAllSpots() {
         return spots;
     }
 
-    @Override
     public Spot getSpot(String id) throws Exception {
         switch(id) {
             case "1":
@@ -48,17 +46,14 @@ public class MockSpotsRepository implements ISpotsRepository {
         }
     }
 
-    @Override
     public void createSpot(Spot spot) {
 
     }
 
-    @Override
     public void deleteSpot(String id) {
 
     }
 
-    @Override
     public void updateSpot(Spot spot) {
 
     }

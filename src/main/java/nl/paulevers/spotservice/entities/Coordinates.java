@@ -4,12 +4,12 @@ import lombok.Data;
 
 @Data
 public class Coordinates {
-    Double x;
-    Double y;
+    Double latitude;
+    Double longitude;
 
-    public Coordinates(Double x, Double y) {
-        this.x = x;
-        this.y = y;
+    public Coordinates(Double latitude, Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 }
 
