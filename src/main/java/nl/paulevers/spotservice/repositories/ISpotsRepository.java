@@ -3,7 +3,6 @@ package nl.paulevers.spotservice.repositories;
 import nl.paulevers.spotservice.entities.Spot;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
 
 public interface ISpotsRepository extends MongoRepository<Spot, String>  {
 

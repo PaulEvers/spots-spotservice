@@ -1,19 +1,14 @@
 package nl.paulevers.spotservice.controllers;
 
-import com.netflix.discovery.EurekaClient;
-import nl.paulevers.spotservice.entities.Coordinates;
 import nl.paulevers.spotservice.entities.Spot;
 import nl.paulevers.spotservice.repositories.ISpotsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @RestController
 public class SpotsController {

@@ -1,10 +1,10 @@
 package nl.paulevers.spotservice.repositories;
 
 import nl.paulevers.spotservice.entities.Spot;
-import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
+// TODO: Remove?
 public class SpotsRepository {
     public List<Spot> getAllSpots() {
         return null;
