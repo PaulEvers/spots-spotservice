@@ -10,7 +10,8 @@ public class EventReceiver {
 
     private Logger log = LoggerFactory.getLogger(EventReceiver.class);
 
-    @RabbitListener(queues = "${workshop.rabbitmq.queue}")
+//    TODO: Enable to listen to RabbitMQ
+//    @RabbitListener(queues = "${workshop.rabbitmq.queue}")
     public void receive(String event) {
         System.out.println("received the event!");
         log.info("Received event in email document generation: {}", event);
