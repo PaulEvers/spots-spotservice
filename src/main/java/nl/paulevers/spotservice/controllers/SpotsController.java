@@ -1,7 +1,7 @@
 package nl.paulevers.spotservice.controllers;
 
 import nl.paulevers.spotservice.entities.Spot;
-import nl.paulevers.spotservice.repositories.ISpotsRepository;
+import nl.paulevers.spotservice.repositories.SpotsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 public class SpotsController {
 
     @Autowired
-    private ISpotsRepository repository;
+    private SpotsRepository repository;
 
 
     @GetMapping(value="/spots")

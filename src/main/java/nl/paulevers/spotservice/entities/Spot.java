@@ -20,4 +20,15 @@ public class Spot {
     List<String> images;
     List<String> facts;
     String audioUrl;
+    int likes;
+
+    public void incrementLike() {
+        likes = likes + 1;
+    }
+
+    public void decrementLike() {
+        likes = likes - 1;
+
+        if (likes < 0) { likes = 0; }
+    }
 }

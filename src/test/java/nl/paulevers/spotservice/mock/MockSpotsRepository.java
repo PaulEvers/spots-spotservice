@@ -2,7 +2,6 @@ package nl.paulevers.spotservice.mock;
 
 import nl.paulevers.spotservice.entities.Coordinates;
 import nl.paulevers.spotservice.entities.Spot;
-import nl.paulevers.spotservice.repositories.ISpotsRepository;
 
 import java.util.List;
 
