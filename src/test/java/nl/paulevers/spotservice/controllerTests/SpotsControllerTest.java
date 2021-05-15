@@ -16,10 +16,5 @@ public class SpotsControllerTest {
 
     @Autowired
     private MockMvc mvc;
-
-    @Test
-    public void okEndpointSpots() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/spots").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk());
-    }
+    
 }
