@@ -31,6 +31,7 @@ public class EventReceiver {
                 break;
             default:
                 log.error("Received unkown event: " + event.getEventType().name());
+                break;
         }
     }
 }
