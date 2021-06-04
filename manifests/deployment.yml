@@ -41,7 +41,11 @@ spec:
         name: spots-spotservice
         ports:
         - containerPort: 8081
-        resources: {}
+        resources:
+          requests:
+            cpu: "250m"
+          limits:
+            cpu: "500m"
       hostname: spots-spotservice
       restartPolicy: Always
       serviceAccountName: ""
