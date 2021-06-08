@@ -31,6 +31,7 @@ class SpotTests {
     @Test
     void coordinates() {
         Coordinates coordinates = new Coordinates(3.0, 5.0);
-        AssertThat
+        assertThat(coordinates.getLatitude()).isEqualTo(3.0);
+        assertThat(coordinates.getLongitude()).isEqualTo(5.0);
     }
 }
